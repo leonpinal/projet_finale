@@ -1,0 +1,383 @@
+* {
+    box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section {
+    display: block;
+}
+
+/* code couleur vert:r=35 g=43 b=8 #232B08; Ocre: r=153 g=118 b=38 #997626, rouge: r=242 g=17 b=17 #F21111, guinda: r=73 g=6 b=6 #490606 */
+/* typographie *** font-family: 'Roboto', sans-serif;
+***************** font-family: 'Roboto Condensed', sans-serif; */
+body {
+    background-color: rgba(229, 185, 27, .5);
+    margin: 0;
+}
+
+#wrapper {
+    background-color: rgba(159, 196, 47, .4);
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+/* <<<<<****************************START HEADER*************************>>>>> */
+#logo {
+    text-align: center;
+    background-color: #232B08;
+}
+
+#logo img {
+    width: 270px;
+    padding: 20px;
+}
+
+/* START style de navigateur *******************/
+
+#responsive_menu ul {
+    margin: 0;
+    padding-left: 0;
+    line-height: 50px;
+
+}
+
+#responsive_menu ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    background-color: #997626;
+    width: 100%;
+    height: 50px;
+}
+
+#responsive_menu ul li a {
+    text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+#responsive_menu ul li a:hover {
+    border-bottom: 2pt solid #F21111;
+    background: rgba(35, 43, 8, .34);
+    height: 20px;
+}
+
+/* HAMBURGER ***************************/
+.menu-btn {
+    padding-top: 10px;
+}
+
+.menu-btn span { /* petites lignes rouges */
+    display: block;
+    background-color: #F21111;
+    width: 50px;
+    height: 5px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#responsive_menu { /* navigateur */
+    width: 100%;
+    display: none;
+}
+
+
+#responsive_menu.expand {
+    display: block;
+}
+
+/* END HAMBURGER ***********************/
+/* <<<<<****************************END HEADER*************************>>>>> */
+
+/* <<<<<********************************START MAIN*************************>>>>>/
+/* START caorousel******************/
+
+#slider {
+    text-align: center;
+}
+
+#overflow {
+    width: 80%; /* Ca ce la partie qui mettre les photos dans un  marc */
+    overflow: hidden;
+    margin: auto;
+
+}
+
+.photo img {
+    width: 100%; /* Ca fait les photos responsives */
+}
+
+#slides .inner {
+    width: 300%; /* la somme de la largeur est 300% */
+}
+
+#slides .photo {
+    float: left; /* on met les photos les unes a cotes des autres, sur le parent, non sur la photo*/
+    width: 33.33333333333333333%;
+}
+
+/* div qui contient les boutons de control */
+#active label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #490606;
+    border-radius: 7px;
+    margin: 10px;
+}
+
+#active {
+    text-align: center;
+}
+
+/* le rapport avec les photos */
+#slide1:checked ~ #slides .inner {
+    margin-left: 0;
+}
+
+#slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+}
+
+#slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+}
+
+/* On cache les inputs */
+#slider input {
+    display: none;
+}
+
+/* END caorousel*******************/
+/* <<<<<********************************END MAIN*************************>>>>>/
+
+/* <<<<<****************************START FOOTER*************************>>>>> */
+footer {
+    background-color: #232B08;
+}
+
+footer h4 {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding-top: 7px;
+    padding-bottom: 4px;
+}
+
+#footer-reseaux img {
+    width: 30px;
+    margin: 0 8px;
+}
+
+footer p {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 10pt;
+    color: #ffffff;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+/* <<<<<****************************END FOOTER*************************>>>>> */
+
+/*systeme de grille*/
+/*cible tous les elements qui ont un attribut class qui contient "col-" pour les forcer a faire 100% de large */
+[class*="col-"] {
+    width: 100%;
+    float: left; /*on flotte les elements qui ont un tatribut col- pour les aligner*/
+    padding: 0; /*un leger padding pour que visuellement les colonnes ne soient pas collées les unes aux autres*/
+}
+
+/*il faut l'appliquer au conteneur des elements qui seront sur une meme ligne*/
+.row:after {
+    content: ""; /*on stoppe l'effet de float, pour eviter que les elements suivants remontent*/
+    clear: both;
+    display: block;
+}
+
+/*END systeme de grilles*/
+
+/*************************************/
+/*STYLES TABLETTES A PARTIR DE 768PX*/
+/*************************************/
+
+@media only screen and (min-width: 768px) {
+
+    /*systeme de grilles*/
+    /*largeur 1 colonnes 1/12*/
+    .col-m-1 {
+        width: 8.33%;
+    }
+
+    /*largeur 2 colonnes 1/6*/
+    .col-m-2 {
+        width: 16.66%;
+    }
+
+    /*largeur de 3 colonnes pour tablette 1/4*/
+    .col-m-3 {
+        width: 25%;
+    }
+
+    /*largeur de 4 colonnes pour tablette 1/3*/
+    .col-m-4 {
+        width: 33.33%;
+    }
+
+    /*largeur de 5 colonnes pour tablette */
+    .col-m-5 {
+        width: 41.66%;
+    }
+
+    /*largeur de 6 colonnes pour tablette 1/2*/
+    .col-m-6 {
+        width: 50%;
+    }
+
+    /*largeur de 7 colonnes pour tablette*/
+    .col-m-7 {
+        width: 58.33%;
+    }
+
+    /*largeur de 8 colonnes pour tablette 2/3*/
+    .col-m-8 {
+        width: 66.66%;
+    }
+
+    /*largeur de 9 colonnes pour tablette 3/4*/
+    .col-m-9 {
+        width: 75%;
+    }
+
+    /*largeur de 10 colonnes pour tablette*/
+    .col-m-10 {
+        width: 83.33%;
+    }
+
+    /*largeur de 11 colonnes pour tablette
+        width: 91.66%;
+        }
+    /*largeur de 12 colonnes pour tablette*/
+    .col-m-12 {
+        width: 100%;
+    }
+
+    /* START header************** */
+    #main-nav {
+        display: none;
+    }
+
+    #responsive_menu {
+        display: inline-block;
+
+
+    }
+
+    #responsive_menu ul {
+        display: inline-block;
+        width: 100%;
+
+    }
+
+    #responsive_menu ul li {
+        background-color: #997626;
+        float: left;
+        width: 25%;
+        margin: 0;
+    }
+
+    /* START main*********************************************/
+    /* START footer*********************************************/
+    /* main */
+
+}
+
+/*END STYLES TABLETTES*/
+
+/*************************************/
+/*STYLES DESKTOP A PARTIR DE 992PX*/
+/*************************************/
+
+@media only screen and (min-width: 992px) {
+
+    /*on definit les classes pour chaque largeur de colonne pour la version desktop*/
+    /*largeur d'une colonne pour desktop = 1/12eme*/
+    .col-1 {
+        width: 8.33%;
+    }
+
+    /*largeur 2 colonnes 1/6*/
+    .col-2 {
+        width: 16.66%;
+    }
+
+    /*largeur de 3 colonnes pour desktop 1/4*/
+    .col-3 {
+        width: 25%;
+    }
+
+    /*largeur de 4 colonnes pour desktop 1/3*/
+    .col-4 {
+        width: 33.33%;
+    }
+
+    /*largeur de 5 colonnes pour desktop */
+    .col-5 {
+        width: 41.66%;
+    }
+
+    /*largeur de 6 colonnes pour desktop 1/2*/
+    .col-6 {
+        width: 50%;
+    }
+
+    /*largeur de 7 colonnes pour desktop*/
+    .col-7 {
+        width: 58.33%;
+    }
+
+    /*largeur de 8 colonnes pour desktop 2/3*/
+    .col-8 {
+        width: 66.66%;
+    }
+
+    /*largeur de 9 colonnes pour desktop 3/4*/
+    .col-9 {
+        width: 75%;
+    }
+
+    /*largeur de 10 colonnes pour desktop*/
+    .col-10 {
+        width: 83.33%;
+    }
+
+    /*largeur de 11 colonnes pour desktop*/
+    .col-11 {
+        width: 91.66%;
+    }
+
+    /*largeur de 12 colonnes pour desktop*/
+    .col-12 {
+        width: 100%;
+    }
+
+    /*main*/
+    /*footer*/
+
+}
+
+/*END STYLES DESKTOP*/
+
+
+
+
+
+
+
+
+
+
+
+
+

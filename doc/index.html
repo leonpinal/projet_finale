@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ursus Terram</title>
+    <meta name="author" content="Jose Leon Pinal Mansilla" >
+    <meta name="description" content="Site dédié à la diffusion des recherches sur la famille Ursideae" >
+    <link rel="stylesheet" href="../style/main.css">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+    <!--START header-->
+    <header>
+        <div id="logo"> <!--logo-->
+            <a href="index.html">
+                <img src="../images/logo_c.png" alt="image de logo"/>
+            </a>
+        </div>
+        <!-- NAVIGATEUR -->
+        <!-- START hamburguer -->
+        <div id="main-nav">
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div><!-- END hamburguer -->
+
+        <nav id="responsive_menu" class="responsive_menu, disable"><!--START navigateur-->
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="association.html">Qui nous sommes</a></li>
+                <li><a href="apprendre.html">Apprendre</a></li>
+                <li><a href="boutique.html">Boutique</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav><!--END navigateur-->
+    </header>  <!--END header-->
+
+    <!--START main--->
+    <!-- LE grand contenur slider -->
+    <div id="slider">
+        <!-- Inputs poul le controle du caroulsel, on va cacher ces inputs -->
+        <input checked type="radio" name="slider" id="slide1">
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <!-- START le carousel -->
+        <div id="slides">
+            <!-- la fênetre -->
+            <div id="overflow">
+                <!-- START photos -->
+                <div class="inner">
+                    <!-- Diapositive 01 -->
+                    <div class="photo">
+                        <img src="../images/carousel/brun.jpg" alt="Diapositive de ours brun">
+                    </div>
+                    <!-- Diapositive 02 -->
+                    <div class="photo">
+                        <img src="../images/carousel/panda.jpg" alt="Diapositive de panda">
+                    </div>
+                    <!-- Diapositive 03 -->
+                    <div class="photo">
+                        <img src="../images/carousel/polaire.jpg" alt="Diapositive de polaire">
+                    </div>
+
+                </div><!-- END inner -->
+
+            </div> <!-- END overflow -->
+
+        </div> <!-- END slides -->
+
+        <!-- div qui contient les boutons de control -->
+        <div id="active">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+        </div><!-- END #active -->
+
+
+    </div><!-- END slider -->
+
+    <!--END main--->
+
+    <!--START footer-->
+    <footer>
+        <div id="footer-reseaux">
+            <h4>Suivez-nous!</h4>
+            <a href="https://www.facebook.com" target="_blank"><img src="../images/resseaux/facebook.png" alt="logo Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="../images/resseaux/twitter.png" alt="logo Twitter"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="../images/resseaux/instagram.png" alt="logo Instagram"></a>
+        </div>
+
+
+        <p>&copy; Ursus Terram 2017. Tous droits réservés</p>
+    </footer><!--END footer-->
+
+</div> <!--END wrapper-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="../script/main.js"></script>
+</body>
+</html>
